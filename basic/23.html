@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>使用setTimeout实现每N秒执行一次</h1>
+<input type="button" name="time" value="5"/><br/>
+<img src="landmine.jpeg" alt=""/>
+</body>
+<script>
+    /*
+     * 使用 setTimeout 模拟 setInterval
+     */
+
+    var clock = null;
+
+    function boom() {
+        var timeButton = document.getElementsByName("time")[0];
+        var timeValue = parseInt(timeButton.value) - 1;
+        timeButton.value = timeValue;
+
+        if (timeValue == 0) {
+            document.getElementsByTagName("img")[0].src = "boom.jpeg";
+            clearTimeout(clock);
+        } else {
+            clock = setTimeout("boom()", 1000)
+        }
+    }
+
+    clock = setTimeout("boom()", 1000);
+</script>
+</html>

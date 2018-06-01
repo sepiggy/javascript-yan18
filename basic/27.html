@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function bian() {
+            document.getElementsByTagName("div")[0].style.border = "1px solid red";
+        }
+    </script>
+</head>
+<body>
+<!--结构, 样式, 行为应该分离, 即 HTML CSS JS 代码要分离, 具体写法见 27-01.html-->
+<div onclick="bian();" style="width: 300px;height: 100px;border: 1px solid blue;"></div>
+</body>
+</html>

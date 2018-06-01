@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * 运算符中与其他语言不同的两个要点:
+         * 1) 字符串拼接
+         * 2) 逻辑运算符
+         */
+
+        // 1) js中, 拼接运算符使用 "+"
+        console.log(2 + 3);
+        console.log('hello' + ' ' + 'world');
+
+        // 一旦遇到非法数字相加, 后面都理解为字符串拼接
+        console.log(2 + 3 + 4 + 'haha' + 5 + 6); // 9haha56
+
+        // 2) js中逻辑运算返回的是最早能判断表达式结果的那个值 (短路)
+        var a = false;
+        var b = 6;
+        var c = true
+        var d = (a || b || c);
+        console.log(d) // 6
+
+        var e = false;
+        var f = 99;
+        console.log(e && f); // false
+        console.log(f && e); // false
+
+        // 做浏览器兼容的时候可以使用到 js 逻辑运算符短路的特性
+        // window.hello = window.hello || window.world;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * js内置对象
+         * 1) 字符串
+         * 2) Date
+         * 3) Math
+         * 4) 数组
+         */
+
+        // 1) 字符串
+        var str = 'helloworld';
+        console.log(str.indexOf('he'));
+        console.log(str.indexOf('dede'));
+        alert(str.indexOf('he') >= 0 ? 'find' : 'not find');
+        alert(str.indexOf('dede') >= 0 ? 'find' : 'not find');
+
+        // 2) Date 对象
+        var date = new Date();
+        console.log(date.getFullYear());
+
+        // 3) Math 都是静态方法, 不用 new 一个 Math 对象
+        console.log(Math.floor(2.3)); // 2
+        console.log(Math.random()); // [0,1) 之间的随机数
+        console.log(Math.random() * 5 + 5); // [5,10)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

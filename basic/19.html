@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select name="" id="prov" onchange="ld();">
+    <option value="-1">请选择</option>
+    <option value="0">北京</option>
+    <option value="1">安徽</option>
+</select>
+<select name="" id="city"></select>
+</body>
+<script>
+    /*
+     * 使用数组和事件模拟联动效果
+     */
+    var area = [
+        ['朝阳', '海淀', '大兴'],
+        ['淮南', '淮北', '合肥'],
+    ];
+
+    function ld() {
+        var provSelectNode = document.getElementById("prov");
+        var citySelectNode = document.getElementById("city");
+        var provSelectValue = provSelectNode.value;
+
+        citySelectNode.innerHTML = "";
+
+        if (provSelectValue == "-1") {
+            citySelectNode.innerHTML = "<option value=\"-1\">请先选择省份</option>";
+        }
+
+        for (var i = 0; i < area[provSelectValue].length; i++) {
+            citySelectNode.innerHTML += "<option value=" + i + ">" + area[provSelectValue][i] + "</option>";
+        }
+    }
+</script>
+</html>

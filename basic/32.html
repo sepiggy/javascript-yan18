@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="标注有邮箱的人" id="isEmail">
+<ul>
+    <li>张飞</li>
+    <li>刘备&lt;liubei@qq.com&gt;</li>
+    <li>关羽</li>
+    <li>赵云&lt;zhaoyun@qq.com&gt;</li>
+</ul>
+</body>
+<script>
+    document.getElementById("isEmail").onclick = function () {
+        var lis = document.getElementsByTagName('li');
+        var pattern = /\w+@\w+(\.\w+)+/
+
+        for (var i = 0; i < lis.length; i++) {
+            if (pattern.exec(lis[i].innerHTML) != null) {
+                lis[i].style.background = "yellow";
+            }
+        }
+    }
+</script>
+</html>

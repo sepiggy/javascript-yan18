@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>定时器</h1>
+<input type="button" name="time" value="5"/><br/>
+<img src="landmine.jpeg" alt=""/>
+</body>
+<script>
+    /*
+     * 清除定时器:
+     * 1) clearTimeout 对应 setTimeout
+     * 2) clearInterval 对应 setInterval
+     */
+
+    function boom() {
+        var timeButton = document.getElementsByName("time")[0];
+        var timeValue = parseInt(timeButton.value) - 1;
+        timeButton.value = timeValue;
+
+        if (timeValue == 0) {
+            document.getElementsByTagName("img")[0].src = "boom.jpeg";
+            clearInterval(clock); // 清除定时器
+        }
+    }
+
+    var clock = setInterval("boom()", 1000);
+</script>
+</html>

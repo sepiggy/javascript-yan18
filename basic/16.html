@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * 删除 DOM 节点的步骤:
+         * 1) 找到要删除的对象 obj
+         * 2) 调用其父对象的方法完成删除: obj.parentNode.removeChild(obj);
+         */
+        function del() {
+            var lis = document.getElementsByTagName("li");
+            var lastLi = lis[lis.length - 1];
+            lastLi.parentNode.removeChild(lastLi);
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="点我删除最后一个li" onclick="del();">
+<ul>
+    <li>春</li>
+    <li>夏</li>
+    <li>秋</li>
+    <li>冬</li>
+</ul>
+</body>
+</html>

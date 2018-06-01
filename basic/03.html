@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * js的变量类型要点:
+         * 1) null 和 undefined
+         * 2) 对象类型支持 . 和 [] 访问; 数组只支持 [] 访问
+         */
+        var a = 23;
+        var b = 3.14;
+
+        var c = 'hello';
+        var d = "world";
+
+        var e = true;
+
+        // null VS undefined
+        var f = null; // 没有对象类型
+        var g = undefined; // 没有原生数据
+
+        // 对象类型;
+        var h = {name: 'lisi', age: 29}
+        console.log(h.name);
+        console.log(h['name']);
+
+        var arr = ['a', 3, 'hello', true];
+        console.log(arr);
+        console.log(arr[3])
+    </script>
+</head>
+<body>
+
+</body>
+</html>

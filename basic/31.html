@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    1: 用户名只能是字母及数字6-11位
+    2: email为正确的email
+</pre>
+<form action="30.html">
+    <p>用户名:<input type="text" name="username"></p>
+    <p>Email:<input type="text" name="email"></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+</body>
+<script>
+    document.getElementsByTagName("form")[0].onsubmit = function () {
+        var pattern = /^[a-zA-Z0-9]{6,11}$/;
+        if (!pattern.test(document.getElementsByName("username")[0].value)) {
+            alert("用户名只能是字母及数字6-11位!");
+            return false;
+        }
+
+        pattern = /^\w+@\w+(\.\w+)+$/
+        if (!pattern.test(document.getElementsByName("email")[0].value)) {
+            alert("Email格式错误!")
+            return false;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * 在提交表单时利用表单提交事件对其进行拦截, 以进行字段校验
+         */
+        function validate() {
+            alert('请完整填写信息');
+            return false;
+        }
+    </script>
+</head>
+<body>
+<h1>表单提交事件</h1>
+<form action="24.html" onsubmit="return validate();">
+    <p><input type="text" name="username" id="username"></p>
+    <p><input type="text" name="email" id="email"></p>
+    <p><input type="submit" value="提交" id="submit"></p>
+</form>
+</body>
+</html>

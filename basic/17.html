@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         * 添加 DOM 节点的步骤:
+         * 1) 创建对象 obj
+         * 2) 找到父对象 parentObj
+         * 3) 调用 parentObj.appendChild(obj) 完成添加节点
+         */
+        function add() {
+            // 创建文本节点
+            var txt = document.createTextNode("冬");
+
+            // 创建 li
+            var li = document.createElement("li");
+            li.appendChild(txt);
+
+            // 获取 ul
+            var ul = document.getElementsByTagName("ul")[0];
+
+            // 添加子元素
+            ul.appendChild(li);
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="点我添加一个节点" onclick="add();">
+<ul>
+    <li>春</li>
+    <li>夏</li>
+    <li>秋</li>
+</ul>
+</body>
+</html>

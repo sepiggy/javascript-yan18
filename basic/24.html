@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function f1() {
+            document.getElementsByName("username")[0].style.border = "1px solid red";
+        }
+
+        function f2() {
+            document.getElementsByName("username")[0].style.border = "1px solid green";
+        }
+    </script>
+</head>
+<body>
+<h1>onfocus, onblur事件</h1>
+<p>
+    用户名:<input type="text" name="username" onfocus="f1();" onblur="f2();">
+</p>
+<p>
+    Email:<input type="text" name="email">
+</p>
+</body>
+</html>

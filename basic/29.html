@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 130px;
+            height: 130px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+<img src="./girl.jpg" alt="">
+</body>
+<script>
+    // 事件对象例子
+    document.getElementsByTagName("img")[0].onmouseover = function (ev) {
+        this.style.left = ev.pageX + 5 + "px";
+        this.style.top = ev.pageY + 5 + "px";
+    };
+
+    document.getElementsByTagName("img")[0].onclick = function () {
+        alert("抓到你啦!");
+    }
+</script>
+</html>

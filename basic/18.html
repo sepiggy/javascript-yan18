@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="添加春夏秋" onclick="add3();">
+<input type="button" value="添加冬" onclick="add1();">
+<ul></ul>
+</body>
+<script>
+    /*
+     * 通过 innerHTML 属性既可以读取, 也可以添加;
+     * 同时通过这种方式添加节点可以添加嵌套节点, 更加方便:
+     * 先找父节点位置, 再改变其 innerHTML 属性
+     * 注: innerHTML 不是 W3C 标准对象属性, 但各个浏览器支持的都很好
+     */
+    function add3() {
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.innerHTML += "<li>春</li><li>夏</li><li>秋</li>";
+    }
+
+    function add1() {
+        var ul = document.getElementsByTagName("ul")[0];
+        ul.innerHTML += "<li>冬</li>";
+    }
+</script>
+</html>
